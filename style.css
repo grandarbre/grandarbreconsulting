@@ -1300,9 +1300,10 @@ ul li {
     
     .member-photo {
         width: 150px;
-        height: 120px;
+        height: 200px;
     }
     .section-title{
         color: #128C7E;
     }
+
 }
