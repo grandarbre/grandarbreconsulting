@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GRAND ARBRE CONSULTING</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Header -->
+<header>
+    <div class="container header-container">
+        <img class="left-image" src="imges/GAC Logo copy 2.png" alt="Grand Arbre Consulting Logo" width="100" height="100">
+        
+        <a href="index.html" class="logo">GRAND <span>ARBRE</span> CONSULTING</a>
+        
+        
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="contact.html#contact-form" class="btn btn-accent">Get Started</a></li>
+        </nav>
+    </div>
+</header>
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for professional compliance and administration support</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+      <section class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below and we'll get back to you <strong>AS SOON AS POSSIBLE</strong></p>
+        </div>
+        
+        <div class="contact-form" id="contact-form">
+           
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                
+                 <input type="hidden" name="access_key" value="d890e377-3fcf-4886-9dd4-c2295f8c6614">
+                <!-- Form Fields -->
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" 
+                           placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" 
+                           placeholder="Enter your email address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" 
+                           placeholder="+27 12 345 6789" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" class="form-control" 
+                           placeholder="Your company name (optional)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="business_type">Type of Business *</label>
+                    <select id="business_type" name="business_type" class="form-control" required>
+                        <option value="">Select your business type</option>
+                        <option value="Startup">Startup Business</option>
+                        <option value="SME">Small/Medium Enterprise (SME)</option>
+                        <option value="Contractor">Contractor/Service Provider</option>
+                        <option value="Growing Business">Growing Business</option>
+                        <option value="Formalizing">Informal to Formal Transition</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Interested In *</label>
+                    <select id="service" name="service" class="form-control" required>
+                        <option value="">Select a service</option>
+                        <option value="Audit & Compliance">Audit and Compliance Support</option>
+                        <option value="Tender Documentation">Tender Documentation & Pricing</option>
+                        <option value="Virtual Administration">Virtual Administration Services</option>
+                        <option value="Business Documentation">Business Documentation & Professionalisation</option>
+                        <option value="Multiple Services">Multiple Services Package</option>
+                        <!-- Fixed duplicate values below -->
+                        <option value="Business Plan and Profiling">Business Plan and Profiling</option>
+                        <option value="Financial Projections">Financial Projections</option>
+                        <option value="Virtual PA">Virtual PA</option>
+                        <option value="Company Audit Compliance">Company Audit Compliance</option>
+                        <option value="Free Consultation">Free 30-Minute Consultation</option>
+                    </select>
+                </div>
+                
+                <!-- OFFICE LOCATION SELECTION -->
+                <div class="office-selection-container">
+                    <h3>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        Select Your Preferred Meeting Location
+                    </h3>
+                    
+                    <!-- Horizontal layout for office cards -->
+                    <div class="office-cards-horizontal">
+                        <!-- Boitumelo Mall Office -->
+                        <div class="office-card-horizontal" onclick="selectOffice('boitumelo')" id="boitumelo-card">
+                            <div class="office-radio">
+                                <input type="radio" id="office-boitumelo" name="preferred_office" value="Boitumelo Mall Office" required>
+                            </div>
+                            <div class="office-info">
+                                <h4>Boitumelo Mall Office</h4>
+                                <p class="office-tagline">High-traffic commercial hub • Walk-ins welcome</p>
+                                <div class="office-details-horizontal" id="boitumelo-details">
+                                    <span><i class="fas fa-check-circle"></i> Mon-Fri: 8am-5pm</span>
+                                    <span><i class="fas fa-check-circle"></i> Sat: 9am-2pm</span>
+                                    <span><i class="fas fa-check-circle"></i> Walk-in services</span>
+                                    <span><i class="fas fa-check-circle"></i> Tender support</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Reitz Park Office -->
+                        <div class="office-card-horizontal" onclick="selectOffice('reitzpark')" id="reitzpark-card">
+                            <div class="office-radio">
+                                <input type="radio" id="office-reitzpark" name="preferred_office" value="Reitz Park Office" required>
+                            </div>
+                            <div class="office-info">
+                                <h4>Reitz Park Office</h4>
+                                <p class="office-tagline">Primary operational centre • Consultations by appointment</p>
+                                <div class="office-details-horizontal" id="reitzpark-details">
+                                    <span><i class="fas fa-check-circle"></i> Mon-Fri: 8am-5pm</span>
+                                    <span><i class="fas fa-check-circle"></i> Sat : 9am-2pm</span>
+                                    <span><i class="fas fa-check-circle"></i> Walk-in services</span>
+                                    <span><i class="fas fa-check-circle"></i> Tender support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preferred Date & Time -->
+                    <div class="date-time-section">
+                        <h4>Preferred Meeting Date & Time (Optional)</h4>
+                        <div class="date-time-grid">
+                            <div>
+                                <label for="preferred_date">Preferred Date</label>
+                                <input type="date" id="preferred_date" name="preferred_date" class="form-control">
+                            </div>
+                            <div>
+                                <label for="preferred_time">Preferred Time</label>
+                                <select id="preferred_time" name="preferred_time" class="form-control">
+                                    <option value="">Select time</option>
+                                    <option value="Morning (8am-10am)">Morning (8am - 10am)</option>
+                                    <option value="Mid-morning (10am-12pm)">Mid-morning (10am - 12pm)</option>
+                                    <option value="Lunch (12pm-2pm)">Lunch (12pm - 2pm)</option>
+                                    <option value="Afternoon (2pm-4pm)">Afternoon (2pm - 4pm)</option>
+                                    <option value="Late Afternoon (4pm-5pm)">Late Afternoon (4pm - 5pm)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="urgency">Urgency Level *</label>
+                    <select id="urgency" name="urgency" class="form-control" required>
+                        <option value="">How soon do you need assistance?</option>
+                        <option value="Normal">Normal - Within 1 week</option>
+                        <option value="Urgent">Urgent - Within 48 hours</option>
+                        <option value="Very Urgent">Very Urgent - Within 24 hours</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" class="form-control" 
+                              placeholder="Tell us about your business, compliance needs, tender opportunities, or specific challenges you're facing..." 
+                              rows="6" required></textarea>
+                </div>
+                
+                <!-- Additional Info -->
+                <div class="additional-info">
+                    <h4>Additional Information</h4>
+                    
+                    <div class="form-group">
+                        <label>What is your biggest challenge right now?</label>
+                        <select name="challenge" class="form-control">
+                            <option value="">Select your main challenge</option>
+                            <option value="Compliance">Meeting compliance requirements</option>
+                            <option value="Tenders">Winning tenders/bids</option>
+                            <option value="Administration">Administrative overload</option>
+                            <option value="Documentation">Professional documentation</option>
+                            <option value="Funding">Securing funding</option>
+                            <option value="Growth">Business growth strategy</option>
+                        </select>
+                    </div>
+                    
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="newsletter" value="yes" checked>
+                        <span>Yes, send me compliance tips and business updates</span>
+                    </div>
+                    
+                    <div class="checkbox-label">
+                        <input type="checkbox" name="consultation" value="yes" checked>
+                        <span>Yes, I'd like a free 30-minute consultation</span>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn" id="submit-btn">
+                    <span id="btn-text">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </span>
+                    <span id="btn-loading" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> Sending...
+                    </span>
+                </button>
+                
+                <p class="security-note">
+                    <i class="fas fa-shield-alt"></i> Your information is secure and confidential. We never share your data.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+        <!-- Alternative Contact Methods -->
+        <section class="content-section">
+            <div class="container">
+                <div class="alternative-contact">
+                    <h3>Other Ways to Reach Us At Reitzpark</h3>
+                    
+                    <div class="contact-methods-grid">
+                        <div class="contact-method-card">
+                            <h3>Email Directly</h3>
+                            <p><strong>info@grandarbre.co.za</strong></p>
+                            <a href="mailto:info@grandarbre.co.za?subject=Consultation Request&body=Hello GRAND ARBRE CONSULTING,%0D%0A%0D%0AI would like to schedule a consultation.%0D%0A%0D%0APlease contact me at your earliest convenience.%0D%0A%0D%0ARegards," 
+                               class="btn">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method-card">
+                            <h3>Call Us</h3>
+                            <p><strong>+27 68 192 1225</strong></p>
+                            <p>Mon-Fri: 8am-5pm <br>Sat: 9am-2pm</p>
+                            <a href="tel:+27686710428" class="btn btn-accent">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method-card">
+                            <h3>WhatsApp</h3>
+                            <p>Quick responses</p>
+                            <a href="https://wa.me/27681921225?text=Hello%20GRAND%20ARBRE%20CONSULTING,%20I%20visited%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20services." 
+                               class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          <section class="content-section">
+            <div class="container">
+                <div class="alternative-contact">
+                    <h3>Other Ways to Reach Us At Boitumelo</h3>
+                    
+                    <div class="contact-methods-grid">
+                        <div class="contact-method-card">
+                            <h3>Email Directly</h3>
+                            <p><strong>info@grandarbre.co.za</strong></p>
+                            <a href="mailto:info@grandarbre.co.za?subject=Consultation Request&body=Hello GRAND ARBRE CONSULTING,%0D%0A%0D%0AI would like to schedule a consultation.%0D%0A%0D%0APlease contact me at your earliest convenience.%0D%0A%0D%0ARegards," 
+                               class="btn">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method-card">
+                            <h3>Call Us</h3>
+                            <p><strong>+27 75 068 7580</strong></p>
+                            <p>Mon-Fri: 8am-5pm <br>Sat: 9am-2pm</p>
+                            <a href="tel:+27686710428" class="btn btn-accent">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                        </div>
+                        
+                        <div class="contact-method-card">
+                            <h3>WhatsApp</h3>
+                            <p>Quick responses</p>
+                            <a href= "https://wa.me/27750687580?text=Hello%20GRAND%20ARBRE%20CONSULTING,%20I%20visited%20your%20website%20and%20would%20like%20to%20inquire%20about%20your%20services." 
+                               class="btn whatsapp-btn">
+                                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Address Section - Side by Side -->
+        <section class="content-section bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Office Locations</h2>
+                    <p>Visit us at either of our convenient locations</p>
+                </div>
+                
+                <!-- This creates side-by-side offices -->
+                <div class="offices-grid">
+                    <!-- Boitumelo Mall Office -->
+                    <div class="office-card" style="cursor: default;">
+                        <div class="location-tag">Boitumelo Mall Office</div>
+                        <h3>Boitumelo Mall - Office</h3>
+                        <p><strong>Address:</strong> Boitumelo Mall, Welkom</p>
+                        <p><strong>Hours:</strong> Mon-Fri: 8am-5pm, Sat: 9am-2pm</p>
+                        <p><strong>Services:</strong> Walk-in compliance, document submission, virtual admin onboarding</p>
+                        <a href="https://maps.google.com/?q=Boitumelo+Mall+Welkom" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-map-marked-alt"></i> Get Directions
+                        </a>
+                    </div>
+                    
+                    <!-- Reitz Park Office -->
+                    <div class="office-card" style="cursor: default;">
+                        <div class="location-tag">Reitz Park Office</div>
+                        <h3>Reitz Park - Office</h3>
+                        <p><strong>Address:</strong> Reitz Park, Welkom</p>
+                        <p><strong>Hours:</strong> Mon-Fri: 8am-5pm, Sat: 9am-2pm</p>
+                        <p><strong>Services:</strong> Consultations, compliance diagnostics, tender documentation</p>
+                        <a href="https://maps.google.com/?q=32 Hammond St, Reitzpark, Welkom, 9488" class="btn" style="margin-top: 15px;">
+                            <i class="fas fa-map-marked-alt"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">GRAND <span>ARBRE</span> CONSULTING</div>
+                    <p>Alive. Inspired. Motivated - EST. 2017</p>
+                    <p>Specialized audit, compliance, tender support & virtual administration for SMMEs across South Africa.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 32 Hammond St, Reitzpark, Welkom, 9488</p>
+                    <p><i class="fas fa-phone"></i> +27 68 671 0428</p>
+                    <p>
+                        <i class="fas fa-envelope"></i> 
+                        <a href="mailto:grandarbrec@gmail.com" style="color: white; text-decoration: none;">
+                           grandarbrec@gmail.com
+                        </a>
+                    </p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8am-5pm<br>Sat: 9am-2pm</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2017 GRAND ARBRE CONSULTING. All rights reserved.</p>
+                <p>Structuring compliance, enabling growth, and supporting sustainable enterprise development.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+    // Mobile menu toggle with opacity effect
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        if (menuToggle && nav) {
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                nav.classList.toggle('active');
+                // Optional: Change icon when menu is open
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    if (nav.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+            
+            // Close menu when a link is clicked
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    nav.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        }
+    });
+</script>
+</body>
+</html>
